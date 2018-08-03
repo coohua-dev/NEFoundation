@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
     
     s.source_files = 'NEFoundation/**/*'
     s.vendored_libraries = 'NEFoundation/**/*.a'
-    s.library           = 'resolv'
-    
+    s.library           = 'resolv','xml2','sqlite3.0','c++','z'
+
     s.public_header_files = 'NEFoundation/**/*.h'
     s.frameworks = 'UIKit', 'MapKit'
     s.dependency 'JSONModel', '1.0.2'
@@ -45,9 +45,7 @@ Pod::Spec.new do |s|
     s.dependency 'WZLBadge'
     s.dependency 'WebViewJavascriptBridge', '6.0'
     s.dependency 'SensorsAnalyticsSDK'
-    s.dependency 'SocketRocket'
     s.dependency 'MBProgressHUD', '1.1.0'
-    s.dependency 'MDRadialProgress'
     s.dependency 'ReactiveCocoa', '2.0'
     s.dependency 'SSZipArchive'
 end
