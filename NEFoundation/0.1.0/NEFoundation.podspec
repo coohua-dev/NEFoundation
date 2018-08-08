@@ -27,8 +27,10 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://gitlab.coohua.com/zhubingcheng/NEFoundation.git', :tag => s.version.to_s }
     
     s.ios.deployment_target = '8.0'
-    
-    s.source_files = 'NEFoundation/**/*'
+    s.resource_bundles = {
+        'Resource' => ['NEFoundation/Assets/*']
+    }
+    s.source_files = 'NEFoundation/Source/**/*'
     s.vendored_libraries = 'NEFoundation/**/*.a'
     s.library           = 'resolv','xml2','sqlite3.0','c++','z'
 
