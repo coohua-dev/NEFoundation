@@ -26,25 +26,23 @@ Pod::Spec.new do |s|
     s.author           = { 'cheng4741@qq.com' => 'cheng4741@qq.com' }
     s.source           = { :git => 'https://gitlab.coohua.com/zhubingcheng/NEFoundation.git', :tag => s.version.to_s }
     
-    s.ios.deployment_target = '8.0'
-    s.resource_bundles = {
-        'Resource' => ['NEFoundation/Assets/*']
-    }
+    s.ios.deployment_target = '11.0'
+#    s.resource_bundles = {
+#        'Resource' => ['NEFoundation/Assets/*']
+#    }
     s.source_files = 'NEFoundation/Source/**/*'
-    s.vendored_libraries = 'NEFoundation/**/*.a'
+#    s.vendored_libraries = 'NEFoundation/**/*.a'
     s.library           = 'resolv','xml2','sqlite3.0','c++','z'
 
     s.public_header_files = 'NEFoundation/**/*.h'
     s.frameworks = 'UIKit', 'MapKit'
-    s.dependency 'JSONModel', '1.0.2'
-    s.dependency 'SDWebImage/WebP'
+    s.dependency 'MJExtension'
+    s.dependency 'SDWebImage'
+    s.dependency 'SDWebImage/GIF'
     s.dependency 'AFNetworking'
     s.dependency 'MJRefresh'
     s.dependency 'Masonry'
     s.dependency 'IQKeyboardManager'
-    s.dependency 'FCUUID'
-    s.dependency 'UICountingLabel'
-    s.dependency 'WZLBadge'
     s.dependency 'WebViewJavascriptBridge', '6.0'
     s.dependency 'SensorsAnalyticsSDK'
     s.dependency 'MBProgressHUD', '1.1.0'
