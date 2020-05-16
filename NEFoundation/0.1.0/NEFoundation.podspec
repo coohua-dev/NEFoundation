@@ -30,20 +30,43 @@ Pod::Spec.new do |s|
 #    s.resource_bundles = {
 #        'Resource' => ['NEFoundation/Assets/*']
 #    }
-    s.source_files = 'NEFoundation/Source/**/*'
+    s.source_files = 'NEFoundation/Source/*.{h,m}'
 #    s.vendored_libraries = 'NEFoundation/**/*.a'
     s.library           = 'resolv','xml2','sqlite3.0','c++','z'
+    
+    s.subspec 'Bridge' do |ss|
+    ss.source_files = 'NEFoundation/Source/Bridge/*.{h,m}'
+    end
+    
+    s.subspec 'Extensions' do |ss|
+    ss.source_files = 'NEFoundation/Source/Extensions/*.{h,m}'
+    end
+    
+    s.subspec 'Model' do |ss|
+    ss.source_files = 'NEFoundation/Source/Model/*.{h,m}'
+    end
+    
+    s.subspec 'Network' do |ss|
+    ss.source_files = 'NEFoundation/Source/Network/*.{h,m}'
+    end
+    
+    s.subspec 'UI' do |ss|
+    ss.source_files = 'NEFoundation/Source/UI/*.{h,m}'
+    end
+    
+    s.subspec 'Utils' do |ss|
+    ss.source_files = 'NEFoundation/Source/Utils/*.{h,m}'
+    end
 
     s.public_header_files = 'NEFoundation/**/*.h'
     s.frameworks = 'UIKit', 'MapKit'
     s.dependency 'MJExtension'
     s.dependency 'SDWebImage'
     s.dependency 'SDWebImage/GIF'
-    s.dependency 'AFNetworking'
+    s.dependency 'AFNetworking', '4.0.1'
     s.dependency 'MJRefresh'
     s.dependency 'Masonry'
     s.dependency 'IQKeyboardManager'
-    s.dependency 'WebViewJavascriptBridge', '6.0'
     s.dependency 'SensorsAnalyticsSDK'
     s.dependency 'MBProgressHUD', '1.1.0'
     s.dependency 'ReactiveCocoa', '2.0'
