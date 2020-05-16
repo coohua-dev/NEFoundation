@@ -25,12 +25,33 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhubinchen' => 'cheng4741@qq.com' }
-  s.source           = { :git => 'https://gitlab.coohua.com/zhubingcheng/NEAdv.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/zhubinchen/NEAdv.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'NEAdv/Source/**/*','NEAdv/Vendored/GDT/Header/*'
+  s.source_files = 'NEAdv/Source/*.{h,m}'
+  
+  s.subspec 'GDT' do |ss|
+  ss.source_files = 'NEAdv/Vendored/GDT/Header/*'
+  end
+  
+  s.subspec 'ADView' do |ss|
+  ss.source_files = 'NEAdv/Source/ADView/*'
+  end
+  
+  s.subspec 'FullScreen' do |ss|
+  ss.source_files = 'NEAdv/Source/FullScreen/*'
+  end
+  
+  s.subspec 'Native' do |ss|
+  ss.source_files = 'NEAdv/Source/Native/*'
+  end
+  
+  s.subspec 'Splash' do |ss|
+  ss.source_files = 'NEAdv/Source/Splash/*'
+  end
+  
   s.resources = "**/*.bundle"
   s.vendored_frameworks = "**/*.framework"
   s.vendored_libraries = "**/*.a"
