@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/cheng4741@qq.com/NEFoundation'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'cheng4741@qq.com' => 'cheng4741@qq.com' }
-    s.source           = { :git => 'https://gitlab.coohua.com/zhubingcheng/NEFoundation.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://gitlab.coohua.com/iOS/NEFoundation.git', :tag => s.version.to_s }
     
     s.ios.deployment_target = '11.0'
 #    s.resource_bundles = {
