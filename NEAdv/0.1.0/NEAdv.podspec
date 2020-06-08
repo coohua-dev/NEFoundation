@@ -51,7 +51,11 @@ TODO: Add long description of the pod here.
   s.subspec 'Splash' do |ss|
   ss.source_files = 'NEAdv/Source/Splash/*'
   end
-  
+
+  s.subspec 'ZhiKe' do |ss|
+  ss.source_files = 'NEAdv/Source/ZhiKe/*'
+  end
+
   s.resources = "**/*.bundle"
   s.vendored_frameworks = "**/*.framework"
   s.vendored_libraries = "**/*.a"
